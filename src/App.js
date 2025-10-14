@@ -14,12 +14,15 @@ import {
   ListItemText,
   Divider,
   Avatar,
+  Grid,
+  Link,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import RestaurantIcon from "@mui/icons-material/Restaurant";
 import logo from "./assets/images/logo.jpeg";
 import banner from "./assets/images/background.png";
 import MenuSection from "./components/MenuSection";
+import { Email, LocationOn, Phone, WhatsApp } from "@mui/icons-material";
 
 export default function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -124,7 +127,10 @@ export default function App() {
                 <ListItemButton
                   onClick={() =>
                     item.id === "order-now"
-                      ? window.open("https://dokanerponno.com/tajmahaltakeaway", "_blank")
+                      ? window.open(
+                          "https://dokanerponno.com/tajmahaltakeaway",
+                          "_blank"
+                        )
                       : handleScroll(item.id)
                   }
                 >
@@ -143,6 +149,7 @@ export default function App() {
       <Box
         id="home"
         sx={{
+          position: "relative",
           backgroundImage: banner && `url(${banner})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -151,60 +158,68 @@ export default function App() {
           py: { xs: 8, sm: 12, md: 16 },
           pt: { xs: 8, sm: 8, md: 8 },
           px: 2,
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background: "rgba(0,0,0,0.5)", // dark overlay
+            zIndex: 1,
+          },
         }}
       >
-        <Avatar
-          src={logo}
-          alt="Taj Mahal Takeaway Logo"
-          sx={{
-            width: { xs: 80, sm: 100, md: 200 },
-            height: { xs: 80, sm: 100, md: 200 },
-            mx: "auto",
-            mb: 2,
-            border: "2px solid white",
-          }}
-        />
-        <Typography
-          variant="h3"
-          fontWeight="bold"
-          sx={{ fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" } }}
-        >
-          Taj Mahal Takeaway SINCE 1997
-        </Typography>
-        <Typography
-          variant="h6"
-          sx={{
-            mt: 1,
-            mb: 3,
-            fontSize: { xs: "1rem", sm: "1.25rem" },
-          }}
-        >
-          Kebabs, Naan, Nihari & Rolls — Flavor Unseen
-        </Typography>
-        <Box>
-          <Button
-            variant="contained"
+        <Box sx={{ position: "relative", zIndex: 2 }}>
+          <Avatar
+            src={logo}
+            alt="Taj Mahal Takeaway Logo"
             sx={{
-              mx: 1,
-              backgroundColor: "orange",
-              fontSize: { xs: "0.8rem", sm: "1rem" },
+              width: { xs: 80, sm: 100, md: 200 },
+              height: { xs: 80, sm: 100, md: 200 },
+              mx: "auto",
+              mb: 2,
+              border: "2px solid white",
             }}
-            onClick={() => handleScroll("menu")}
+          />
+          <Typography
+            variant="h3"
+            fontWeight="bold"
+            sx={{ fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" } }}
           >
-            View Menu
-          </Button>
-          <Button
-            href="https://dokanerponno.com/tajmahaltakeaway"
-            variant="outlined"
-            sx={{
-              mx: 1,
-              color: "white",
-              borderColor: "white",
-              fontSize: { xs: "0.8rem", sm: "1rem" },
-            }}
+            Taj Mahal Takeaway SINCE 1997
+          </Typography>
+          <Typography
+            variant="h6"
+            sx={{ mt: 1, mb: 3, fontSize: { xs: "1rem", sm: "1.25rem" } }}
           >
-            Order Now
-          </Button>
+            Kebabs, Naan, Nihari & Rolls — Flavor Unseen
+          </Typography>
+          <Box>
+            <Button
+              variant="contained"
+              sx={{
+                mx: 1,
+                backgroundColor: "orange",
+                fontSize: { xs: "0.8rem", sm: "1rem" },
+              }}
+              onClick={() => handleScroll("menu")}
+            >
+              View Menu
+            </Button>
+            <Button
+              href="https://dokanerponno.com/tajmahaltakeaway"
+              variant="outlined"
+              sx={{
+                mx: 1,
+                color: "white",
+                borderColor: "white",
+                fontSize: { xs: "0.8rem", sm: "1rem" },
+              }}
+            >
+              Order Now
+            </Button>
+          </Box>
         </Box>
       </Box>
 
@@ -284,6 +299,128 @@ export default function App() {
         />
       </Box>
 
+      {/* contact */}
+      <Box
+        id="contact"
+        sx={{
+          // background: "linear-gradient(135deg, #fff0e0 0%, #ffe6d5 100%)",
+          py: { xs: 10, sm: 14 },
+          px: 2,
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        {/* Decorative floating circles */}
+        <Box
+          sx={{
+            position: "absolute",
+            width: 200,
+            height: 200,
+            borderRadius: "50%",
+            background: "rgba(241, 73, 0, 0.1)",
+            top: -50,
+            left: -50,
+            zIndex: 0,
+          }}
+        />
+        <Box
+          sx={{
+            position: "absolute",
+            width: 250,
+            height: 250,
+            borderRadius: "50%",
+            background: "rgba(255, 165, 0, 0.1)",
+            bottom: -80,
+            right: -60,
+            zIndex: 0,
+          }}
+        />
+
+        <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            textAlign="center"
+            mb={8}
+            sx={{ color: "#8B0000", fontSize: { xs: "1.8rem", sm: "2.5rem" } }}
+          >
+            Contact Us
+          </Typography>
+
+          <Grid container spacing={6} justifyContent="center">
+            {[
+              {
+                icon: <Phone sx={{ fontSize: 40, color: "white" }} />,
+                label: "+8801332129714",
+                bg: "linear-gradient(135deg, #F14900, #FF7F50)",
+                link: "tel:+8801332129714",
+              },
+              {
+                icon: <WhatsApp sx={{ fontSize: 40, color: "white" }} />,
+                label: "Chat on WhatsApp",
+                bg: "linear-gradient(135deg, #25D366, #00C851)",
+                link: "https://wa.me/+8801332129714",
+              },
+              {
+                icon: <LocationOn sx={{ fontSize: 40, color: "white" }} />,
+                label: "46/5 Kemal Ataturk Avenue, Banani, Dhaka",
+                bg: "linear-gradient(135deg, #8B0000, #F14900)",
+                link: "https://maps.app.goo.gl/1n7p1ohnCbLxmPup8",
+              },
+            ].map((item, idx) => (
+              <Grid item xs={12} sm={6} md={4} key={idx}>
+                <Box
+                  component="a"
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    textAlign: "center",
+                    textDecoration: "none",
+                    p: 5,
+                    borderRadius: 3,
+                    background: "#fff",
+                    boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
+                    transition: "all 0.4s ease",
+                    "&:hover": {
+                      transform: "translateY(-10px)",
+                      boxShadow: "0 16px 30px rgba(0,0,0,0.15)",
+                    },
+                  }}
+                >
+                  <Box
+                    sx={{
+                      mb: 3,
+                      width: 80,
+                      height: 80,
+                      borderRadius: "50%",
+                      background: item.bg,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                    }}
+                  >
+                    {item.icon}
+                  </Box>
+                  <Typography
+                    variant="subtitle1"
+                    fontWeight={600}
+                    color="text.primary"
+                    sx={{ fontSize: { xs: "0.95rem", sm: "1rem" } }}
+                  >
+                    {item.label}
+                  </Typography>
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+
       {/* Footer */}
       <Box
         sx={{
@@ -304,7 +441,23 @@ export default function App() {
           variant="body2"
           sx={{ fontSize: { xs: "0.8rem", sm: "1rem" } }}
         >
-          📍 Dhaka, Bangladesh | ☎ +880 123 456 789 | WhatsApp | Facebook
+          📍 46/5 Kemal Ataturk Avenue, Banani, Dhaka | ☎{" "}
+          <Link
+            href="tel:+8801332129714"
+            color="inherit"
+            sx={{ textDecoration: "none" }}
+          >
+            +8801332129714
+          </Link>{" "}
+          |{" "}
+          <Link
+            href="https://wa.me/+8801332129714"
+            color="inherit"
+            sx={{ textDecoration: "none" }}
+          >
+            WhatsApp
+          </Link>{" "}
+          | Facebook
         </Typography>
       </Box>
     </>

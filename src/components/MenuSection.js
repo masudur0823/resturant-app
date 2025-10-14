@@ -30,7 +30,8 @@ const dishImages = {
     "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=80",
 };
 
-function MenuSection({variant}) {
+function MenuSection({ variant }) {
+  
   const menu = {
     Appetizers: [
       {
