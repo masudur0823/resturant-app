@@ -42,7 +42,7 @@ export default function App() {
     {
       label: "Order Now",
       id: "order-now",
-      link: "https://dokanerponno.com/tajmahaltakeaway",
+      link: "https://wa.me/+8801332129714",
     },
   ];
 
@@ -82,7 +82,7 @@ export default function App() {
             ))}
             <Button
               variant="contained"
-              href="https://dokanerponno.com/tajmahaltakeaway"
+              href="https://wa.me/+8801332129714"
               sx={{
                 backgroundColor: "orange",
                 "&:hover": { backgroundColor: "#e68900" },
@@ -128,7 +128,7 @@ export default function App() {
                   onClick={() =>
                     item.id === "order-now"
                       ? window.open(
-                          "https://dokanerponno.com/tajmahaltakeaway",
+                          "https://wa.me/+8801332129714",
                           "_blank"
                         )
                       : handleScroll(item.id)
@@ -208,7 +208,7 @@ export default function App() {
               View Menu
             </Button>
             <Button
-              href="https://dokanerponno.com/tajmahaltakeaway"
+              href="https://wa.me/+8801332129714"
               variant="outlined"
               sx={{
                 mx: 1,
@@ -224,6 +224,8 @@ export default function App() {
       </Box>
 
       {/* Menu Section */}
+     
+
       <MenuSection variant={2} />
 
       {/* About Section */}
