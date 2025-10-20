@@ -127,10 +127,7 @@ export default function App() {
                 <ListItemButton
                   onClick={() =>
                     item.id === "order-now"
-                      ? window.open(
-                          "https://wa.me/+8801332129714",
-                          "_blank"
-                        )
+                      ? window.open("https://wa.me/+8801332129714", "_blank")
                       : handleScroll(item.id)
                   }
                 >
@@ -155,7 +152,7 @@ export default function App() {
           backgroundPosition: "center",
           textAlign: "center",
           color: "white",
-          py: { xs: 8, sm: 12, md: 16 },
+          py: { xs: 8, sm: 12, md: 18 },
           pt: { xs: 8, sm: 8, md: 8 },
           px: 2,
           "&::before": {
@@ -224,9 +221,12 @@ export default function App() {
       </Box>
 
       {/* Menu Section */}
-     
 
-      <MenuSection />
+      <Box sx={{ p: { xs: 0, md: 8 }, bgcolor: "#fff5f0" }}  id="menu">
+        <Container>
+          <MenuSection />
+        </Container>
+      </Box>
 
       {/* About Section */}
       <Box
