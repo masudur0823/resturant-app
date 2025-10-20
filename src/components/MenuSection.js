@@ -12,37 +12,38 @@ import {
   Chip,
   Stack,
 } from "@mui/material";
+import menuData from "../assets/static/Menus";
 
 // Dummy menu data
-const menuData = [
-  {
-    category: "Burgers",
-    items: Array.from({ length: 50 }, (_, i) => ({
-      id: i + 1,
-      itemName: `Burger ${i + 1}`,
-      itemPrice: 5 + (i % 5),
-      itemImage: "https://source.unsplash.com/300x200/?burger",
-    })),
-  },
-  {
-    category: "Pizzas",
-    items: Array.from({ length: 50 }, (_, i) => ({
-      id: i + 101,
-      itemName: `Pizza ${i + 1}`,
-      itemPrice: 8 + (i % 5),
-      itemImage: "https://source.unsplash.com/300x200/?pizza",
-    })),
-  },
-  {
-    category: "Drinks",
-    items: Array.from({ length: 50 }, (_, i) => ({
-      id: i + 201,
-      itemName: `Drink ${i + 1}`,
-      itemPrice: 2 + (i % 3),
-      itemImage: "https://source.unsplash.com/300x200/?drink",
-    })),
-  },
-];
+// const menuData = [
+//   {
+//     category: "Burgers",
+//     items: Array.from({ length: 150 }, (_, i) => ({
+//       id: i + 1,
+//       itemName: `Burger ${i + 1}`,
+//       itemPrice: 5 + (i % 5),
+//       itemImage: "https://source.unsplash.com/300x200/?burger",
+//     })),
+//   },
+//   {
+//     category: "Pizzas",
+//     items: Array.from({ length: 50 }, (_, i) => ({
+//       id: i + 101,
+//       itemName: `Pizza ${i + 1}`,
+//       itemPrice: 8 + (i % 5),
+//       itemImage: "https://source.unsplash.com/300x200/?pizza",
+//     })),
+//   },
+//   {
+//     category: "Drinks",
+//     items: Array.from({ length: 50 }, (_, i) => ({
+//       id: i + 201,
+//       itemName: `Drink ${i + 1}`,
+//       itemPrice: 2 + (i % 3),
+//       itemImage: "https://source.unsplash.com/300x200/?drink",
+//     })),
+//   },
+// ];
 
 const ITEMS_PER_PAGE = 12;
 
@@ -129,22 +130,27 @@ const MenuSection = () => {
                 },
               }}
             >
-              <CardMedia
-                component="img"
-                image={item.itemImage}
-                alt={item.itemName}
+              <Box
                 sx={{
                   width: 120,
                   height: 120,
                   borderRadius: "50%",
-                  objectFit: "cover",
+                  // objectFit: "cover",
                   position: "absolute",
                   top: -60,
                   left: "50%",
                   transform: "translateX(-50%)",
                   border: "5px solid white",
+                  overflow: "hidden",
                 }}
-              />
+              >
+                <CardMedia
+                  component="img"
+                  image={item.itemImage}
+                  alt={item.itemName}
+                  sx={{ objectFit: "cover", scale: 3 }}
+                />
+              </Box>
               <CardContent sx={{ mt: 6 }}>
                 <Typography
                   variant="h6"
@@ -155,7 +161,7 @@ const MenuSection = () => {
                 </Typography>
 
                 <Chip
-                  label={`$${item.itemPrice}`}
+                  label={`${item.itemPrice} tk`}
                   color="secondary"
                   sx={{ mb: 2, fontWeight: "bold", fontSize: "1rem" }}
                 />

@@ -226,7 +226,7 @@ export default function App() {
       {/* Menu Section */}
      
 
-      <MenuSection variant={2} />
+      <MenuSection />
 
       {/* About Section */}
       <Box
