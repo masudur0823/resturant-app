@@ -4,37 +4,37 @@ const menuData = [
     items: [
       {
         itemName: "Garlic Naan",
-        itemPrice: 72,
+        itemPrice: 80,
         oldPrice: 90,
         itemImage: require("../images/products/ALL Naan/40.png"),
       },
       {
         itemName: "Jeera Naan",
-        itemPrice: 72,
+        itemPrice: 80,
         oldPrice: 90,
         itemImage: require("../images/products/ALL Naan/38.png"),
       },
       {
         itemName: "Onion Naan",
-        itemPrice: 72,
+        itemPrice: 80,
         oldPrice: 90,
         itemImage: require("../images/products/ALL Naan/39.png"),
       },
       {
         itemName: "Butter Naan",
-        itemPrice: 64,
+        itemPrice: 65,
         oldPrice: 80,
         itemImage: require("../images/products/ALL Naan/40.png"),
       },
       {
         itemName: "Plain Naan",
-        itemPrice: 64,
+        itemPrice: 65,
         oldPrice: 80,
         itemImage: require("../images/products/ALL Naan/38.png"),
       },
       {
         itemName: "Laccha Paratha",
-        itemPrice: 44,
+        itemPrice: 45,
         oldPrice: 55,
         itemImage: require("../images/products/ALL Naan/39.png"),
       },
