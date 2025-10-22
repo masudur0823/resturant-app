@@ -152,7 +152,7 @@ export default function App() {
           backgroundPosition: "center",
           textAlign: "center",
           color: "white",
-          py: { xs: 8, sm: 12, md: 18 },
+          py: { xs: 8, sm: 10 },
           pt: { xs: 8, sm: 8, md: 8 },
           px: 2,
           "&::before": {
@@ -180,11 +180,17 @@ export default function App() {
             }}
           />
           <Typography
-            variant="h3"
-            fontWeight="bold"
-            sx={{ fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" } }}
+            variant="h2" // Bumped to h2 for prominence
+            fontWeight={800} // Extra bold
+            letterSpacing={1} // Slight letter spacing
+            sx={{
+              textShadow: "2px 2px 4px rgba(0,0,0,0.8)", // Text shadow for legibility
+              mb: 1,
+              fontSize: { xs: "1.5rem", sm: "3rem", md: "4rem" }, // Larger for impact
+            }}
           >
-            Taj Mahal Takeaway SINCE 1997
+            Taj Mahal Takeaway
+            <br /> SINCE 1997
           </Typography>
           <Typography
             variant="h6"
@@ -222,7 +228,7 @@ export default function App() {
 
       {/* Menu Section */}
 
-      <Box sx={{ p: { xs: 0, md: 8 }, bgcolor: "#fff5f0" }}  id="menu">
+      <Box sx={{ p: { xs: 0, md: 8 }, bgcolor: "#fff5f0" }} id="menu">
         <Container>
           <MenuSection />
         </Container>
