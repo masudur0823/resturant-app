@@ -153,7 +153,7 @@ export default function App() {
           textAlign: "center",
           color: "white",
           py: { xs: 8, sm: 10 },
-          pt: { xs: 8, sm: 8, md: 8 },
+          pt: { xs: 8, sm: 6},
           px: 2,
           "&::before": {
             content: '""',
@@ -186,7 +186,7 @@ export default function App() {
             sx={{
               textShadow: "2px 2px 4px rgba(0,0,0,0.8)", // Text shadow for legibility
               mb: 1,
-              fontSize: { xs: "1.5rem", sm: "3rem", md: "4rem" }, // Larger for impact
+              fontSize: { xs: "1.5rem", sm: "3rem"}, // Larger for impact
             }}
           >
             Taj Mahal Takeaway
