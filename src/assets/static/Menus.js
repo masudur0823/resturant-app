@@ -433,6 +433,82 @@ const menuData = [
       },
     ],
   },
+   {
+    category: "Fast Food",
+    items: [
+      {
+        itemName: "Brownie Slice Cake",
+        itemPrice: 70,
+        oldPrice: null,
+        itemImage: require("../images/products/fast Food Items Pictures/Brownie Slice Cake - 70 Taka.jpg"),
+      },
+      {
+        itemName: "Chicken Club Sandwich",
+        itemPrice: 120,
+        oldPrice: null,
+        itemImage: require("../images/products/fast Food Items Pictures/Chicken Club Sandwich -120 Taka .jpg"),
+      },
+      {
+        itemName: "Chicken Keema Paratha",
+        itemPrice: 80,
+        oldPrice: null,
+        itemImage: require("../images/products/fast Food Items Pictures/Chicken Keema Paratha - 80 Taka.jpg"),
+      },
+      {
+        itemName: "Chicken Mushroom Top Patties",
+        itemPrice: 100,
+        oldPrice: null,
+        itemImage: require("../images/products/fast Food Items Pictures/Chicken Mushroom Top Patties - 100 Taka  .jpg"),
+      },
+       {
+        itemName: "Chicken Picnic Roll",
+        itemPrice: 100,
+        oldPrice: null,
+        itemImage: require("../images/products/fast Food Items Pictures/Chicken Picnic Roll - 100 Taka .jpg"),
+      },{
+        itemName: "Chicken Sandwich",
+        itemPrice: 100,
+        oldPrice: null,
+        itemImage: require("../images/products/fast Food Items Pictures/Chicken Sandwich - 100 taka .jpg"),
+      },{
+        itemName: "Chicken Shahi Paratha",
+        itemPrice: 110,
+        oldPrice: null,
+        itemImage: require("../images/products/fast Food Items Pictures/Chicken Shahi Paratha - 110 taka .jpg"),
+      },{
+        itemName: "Chocolet Milk Cake Slice",
+        itemPrice: 70,
+        oldPrice: null,
+        itemImage: require("../images/products/fast Food Items Pictures/Chocolet Milk Cake Slice - 70 Taka.jpg"),
+      },{
+        itemName: "Egg Chicken Patties",
+        itemPrice: 100,
+        oldPrice: null,
+        itemImage: require("../images/products/fast Food Items Pictures/Egg Chicken Patties- 100 Taka.jpg"),
+      },{
+        itemName: "Fruit Cake Slice",
+        itemPrice: 65,
+        oldPrice: null,
+        itemImage: require("../images/products/fast Food Items Pictures/Fruit Cake Slice - 65 Taka.jpg"),
+      },{
+        itemName: "Kolija Singara",
+        itemPrice: 70,
+        oldPrice: null,
+        itemImage: require("../images/products/fast Food Items Pictures/Kolija Singara - 70 Taka.jpg"),
+      },{
+        itemName: "Mini Chicken Sqaure Patties",
+        itemPrice: 80,
+        oldPrice: null,
+        itemImage: require("../images/products/fast Food Items Pictures/Mini Chicken Sqaure Patties - 80 Taka.jpg"),
+      },{
+        itemName: "Plain Cake Slice",
+        itemPrice: 65,
+        oldPrice: null,
+        itemImage: require("../images/products/fast Food Items Pictures/Plain Cake Slice - 65 Taka .jpg"),
+      }
+      
+    ],
+  },
 ];
 
 export default menuData;
